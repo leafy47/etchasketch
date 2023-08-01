@@ -5,19 +5,29 @@ h1 {
 
 .container {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
     height: 900px;
     width: 900px;
     padding: 12px;
     background-color: antiquewhite;
     margin:auto;
     gap: 1px;
+    flex-direction: column;
+}
+
+.lesserdiv {
+    display: flex;
+    justify-content: stretch;
+    align-content: stretch;
+    gap: 1px;
+    background-color: antiquewhite;
+    flex: 1;
 }
 
 .initialdiv {
     background-color: black;
-    height: 100px;
-    width: 100px;
+    flex: 1;
 }
+
 

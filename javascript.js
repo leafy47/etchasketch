@@ -1,12 +1,20 @@
 newDiv = document.createElement('div');
-newDiv.setAttribute('class', 'initialdiv')
+newDiv.setAttribute('class', 'initialdiv');
+lesserDiv = document.createElement('div');
+lesserDiv.setAttribute('class', 'lesserdiv');
 
 container = document.querySelector('.container');
-container.appendChild(newDiv);
 
-function startingDivs () {
-    for (i = 0; i < 257; i++) {
-        container.appendChild(newDiv);
+function firstThis () {
+    for (i = 0; i < 16; i++) {
+        lesserDiv.appendChild(newDiv.cloneNode(true));
     }
 }
-//startingDivs();
+
+function startingDivs () {
+    for (let i = 0; i < 16; i++) {
+            container.appendChild(lesserDiv.cloneNode(true));
+        }
+    }
+firstThis();
+startingDivs();
