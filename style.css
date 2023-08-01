@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    margin: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 1200px;
+    width: 1200px;
+    padding: 12px;
+    background-color: antiquewhite;
+}
+
