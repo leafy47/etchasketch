@@ -4,9 +4,6 @@ lesserDiv = document.createElement('div');
 lesserDiv.setAttribute('class', 'lesserdiv');
 let userInput = document.getElementById('resetform');
 let reset = document.getElementById('resetone');
-
-
-
 container = document.querySelector('.container');
 
 function createGrid (i) {
@@ -31,12 +28,19 @@ turn();
 function turn () {
     turnBlue = document.querySelectorAll('.initialdiv');
     turnBlue.forEach((div) => {
-        div.addEventListener('mouseover', () => div.style.backgroundColor = 'blue')
+        div.addEventListener('mouseover', () => div.style.backgroundColor = getRandomColor())
     });
 }
 
 
-
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 userInput.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -58,5 +62,5 @@ function removeDiv () {
     while (container.firstChild) {
         container.removeChild(container.lastChild);
     }
-    }
+}
 
